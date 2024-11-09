@@ -15,7 +15,7 @@
         /* Body */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #f0f4f8;
             color: #333;
             line-height: 1.6;
         }
@@ -30,39 +30,42 @@
         /* Header */
         header {
             text-align: center;
-            padding: 50px 0;
+            padding: 60px 0;
+            background-color: #003366;
+            color: #ffffff;
         }
 
         header h1 {
-            font-size: 2.5em;
-            color: #333;
+            font-size: 3em;
             font-weight: bold;
+            margin-bottom: 10px;
         }
 
         header p {
-            color: #666;
-            margin-top: 10px;
+            font-size: 1.2em;
+            color: #a6c1e2;
         }
 
         /* Sections */
         section {
             margin-top: 50px;
             padding: 40px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
         }
 
         section h2 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.8em;
+            color: #003366;
+            margin-bottom: 20px;
+            font-size: 2em;
             text-align: center;
         }
 
         section p {
-            color: #666;
+            color: #555;
             text-align: center;
+            font-size: 1.1em;
         }
 
         /* Specialties */
@@ -78,16 +81,27 @@
             flex: 1;
             min-width: 200px;
             max-width: 300px;
-            background: #eaeef3;
+            background: #e1e7ed;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .specialty-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .specialty-item h3 {
-            font-size: 1.2em;
-            color: #333;
+            font-size: 1.4em;
+            color: #003366;
             margin-bottom: 10px;
+        }
+
+        .specialty-item p {
+            color: #666;
+            font-size: 1em;
         }
 
         /* Contact Form */
@@ -100,7 +114,7 @@
         .contact-form input,
         .contact-form textarea {
             width: 80%;
-            padding: 10px;
+            padding: 12px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -108,10 +122,10 @@
         }
 
         .contact-form button {
-            padding: 10px 20px;
+            padding: 12px 30px;
             font-size: 1em;
-            background-color: #333;
-            color: #fff;
+            background-color: #003366;
+            color: #ffffff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -119,7 +133,7 @@
         }
 
         .contact-form button:hover {
-            background-color: #555;
+            background-color: #00509e;
         }
 
         /* Footer */
@@ -128,6 +142,8 @@
             padding: 20px;
             font-size: 0.9em;
             color: #666;
+            background-color: #f0f4f8;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -156,10 +172,6 @@
                 <div class="specialty-item">
                     <h3>SEO & Content Strategy</h3>
                     <p>Creating optimized content that ranks well in search engines and provides real value to users.</p>
-                </div>
-                <div class="specialty-item">
-                    <h3>Email Marketing</h3>
-                    <p>Designing targeted email campaigns that nurture leads and drive conversions.</p>
                 </div>
                 <div class="specialty-item">
                     <h3>POD Designer and Seller</h3>
