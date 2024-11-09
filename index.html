@@ -3,124 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omar Amhaoud - Digital Marketer</title>
+    <title>Omar Amhaoud - Digital Marketer Portfolio</title>
     <style>
-        /* Reset */
+        /* Reset and universal styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica', sans-serif;
         }
 
-        /* Body */
         body {
-            background: linear-gradient(135deg, #f0f4f8, #c9d6ff);
+            background: #f9f9f9;
             color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            padding: 0 20px;
         }
 
-        /* Container */
+        /* Main container */
         .container {
             max-width: 1200px;
-            width: 100%;
-            margin: 20px;
+            margin: 0 auto;
+            padding: 30px 0;
         }
 
-        /* Header */
+        /* Header styles */
         header {
+            background: #0077b6;
+            color: white;
             text-align: center;
-            padding: 60px 0;
-            background: linear-gradient(135deg, #003366, #0077b6);
-            color: #ffffff;
+            padding: 80px 20px;
             border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
-
-        header:hover {
-            transform: translateY(-5px);
+            margin-bottom: 50px;
         }
 
         header h1 {
-            font-size: 3em;
+            font-size: 3rem;
             font-weight: bold;
         }
 
         header p {
-            font-size: 1.2em;
-            color: #d1e7ff;
+            font-size: 1.2rem;
+            margin-top: 10px;
         }
 
-        /* Sections */
+        /* Section styles */
         section {
-            margin-top: 50px;
+            background: white;
             padding: 40px;
-            background: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s;
-        }
-
-        section:hover {
-            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
         }
 
         section h2 {
+            font-size: 2rem;
             color: #003366;
-            font-size: 2em;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         section p {
-            color: #555;
             text-align: center;
-            font-size: 1.1em;
-            line-height: 1.6;
+            font-size: 1.1rem;
+            color: #555;
         }
 
-        /* Specialties */
+        /* Specialties styles */
         .specialties {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
 
         .specialty-item {
-            background: linear-gradient(135deg, #e1e7ed, #a1c4fd);
-            padding: 20px;
+            background: #c9d6ff;
+            padding: 25px;
             border-radius: 12px;
             text-align: center;
-            min-width: 200px;
-            max-width: 300px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .specialty-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
         }
 
         .specialty-item h3 {
-            font-size: 1.4em;
+            font-size: 1.4rem;
             color: #003366;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .specialty-item p {
-            color: #333;
-            font-size: 1em;
+            color: #444;
+            font-size: 1rem;
         }
 
-        /* Contact Form */
+        /* Contact form styles */
         .contact-form {
             display: flex;
             flex-direction: column;
@@ -131,24 +113,23 @@
         .contact-form textarea {
             width: 80%;
             padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
+            margin: 15px 0;
+            border: 2px solid #0077b6;
             border-radius: 8px;
-            font-size: 1em;
-            transition: border 0.3s, box-shadow 0.3s;
+            font-size: 1rem;
+            transition: border 0.3s;
         }
 
         .contact-form input:focus,
         .contact-form textarea:focus {
-            border: 1px solid #0077b6;
-            box-shadow: 0 4px 8px rgba(0, 119, 182, 0.3);
+            border: 2px solid #003366;
         }
 
         .contact-form button {
             padding: 12px 30px;
-            font-size: 1em;
+            font-size: 1.2rem;
+            color: white;
             background-color: #0077b6;
-            color: #ffffff;
             border: none;
             border-radius: 8px;
             cursor: pointer;
@@ -157,66 +138,48 @@
 
         .contact-form button:hover {
             background-color: #00509e;
-            transform: translateY(-3px);
+            transform: translateY(-5px);
         }
 
-        /* Footer */
+        /* Footer styles */
         footer {
             text-align: center;
             padding: 20px;
-            font-size: 0.9em;
+            font-size: 1rem;
             color: #555;
-            margin-top: 40px;
         }
 
-        /* Media Queries */
-        @media screen and (max-width: 768px) {
-            /* Header */
+        /* Responsive Design */
+        @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5em;
+                font-size: 2.5rem;
             }
 
             header p {
-                font-size: 1.1em;
+                font-size: 1rem;
             }
 
-            /* Specialties Section */
             .specialties {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
+                grid-template-columns: 1fr;
             }
 
-            .specialty-item {
-                min-width: 90%;
-                max-width: 90%;
-            }
-
-            /* Contact Form */
             .contact-form input,
             .contact-form textarea {
-                width: 90%;
-            }
-
-            .contact-form button {
-                width: 90%;
+                width: 100%;
             }
         }
 
-        @media screen and (max-width: 480px) {
-            /* Header */
+        @media (max-width: 480px) {
             header h1 {
-                font-size: 2em;
+                font-size: 2rem;
             }
 
-            /* Specialties Section */
+            header p {
+                font-size: 0.9rem;
+            }
+
             .specialties {
-                gap: 10px;
-            }
-
-            .specialty-item {
-                min-width: 100%;
-                max-width: 100%;
+                grid-template-columns: 1fr;
             }
 
             .contact-form input,
@@ -229,16 +192,17 @@
 </head>
 <body>
 
-    <header>
-        <h1>OMAR AMHAOUD</h1>
-        <p>Digital Nomad & Marketing Specialist</p>
-    </header>
-
     <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Omar Amhaoud</h1>
+            <p>Digital Marketer | Creator | POD Designer & Seller | Web Front-End Developer</p>
+        </header>
+
         <!-- About Me Section -->
-        <section id="about-me">
+        <section id="about">
             <h2>About Me</h2>
-            <p>I'm Omar, a digital marketer and creator with a unique blend of skills in print-on-demand design, web front-end development, and brand building. My passion lies in crafting visually engaging content and data-driven strategies that bring brands closer to their audience.</p>
+            <p>I’m Omar, a passionate digital marketer, creator, and print-on-demand (POD) designer and seller. I specialize in crafting creative and data-driven marketing strategies to help brands grow, while also bringing unique designs to life through POD platforms. My enthusiasm for web front-end development drives me to constantly create engaging, user-friendly websites and digital experiences.</p>
         </section>
 
         <!-- Specialties Section -->
@@ -246,20 +210,16 @@
             <h2>My Specialties</h2>
             <div class="specialties">
                 <div class="specialty-item">
-                    <h3>Social Media Marketing</h3>
-                    <p>Building and nurturing online communities to engage audiences and drive brand loyalty.</p>
-                </div>
-                <div class="specialty-item">
-                    <h3>SEO & Content Strategy</h3>
-                    <p>Creating optimized content that ranks well in search engines and provides real value to users.</p>
-                </div>
-                <div class="specialty-item">
-                    <h3>POD Designer and Seller</h3>
-                    <p>Creating unique, high-quality designs for print-on-demand products and expertly managing e-commerce channels to boost sales and customer engagement.</p>
+                    <h3>POD Designer & Seller</h3>
+                    <p>Creating unique designs for print-on-demand products, handling e-commerce platforms, and maximizing sales through design excellence and marketing strategies.</p>
                 </div>
                 <div class="specialty-item">
                     <h3>Web Front-End Developer</h3>
-                    <p>Building sleek, responsive websites with a focus on user experience and interactivity, turning creative ideas into functional, visually appealing web pages.</p>
+                    <p>Building sleek, responsive websites with a focus on performance, user experience, and creative designs that meet modern web standards.</p>
+                </div>
+                <div class="specialty-item">
+                    <h3>Social Media & Digital Marketing</h3>
+                    <p>Building digital marketing strategies that help brands grow on social media through engaging content, SEO, and paid advertising campaigns.</p>
                 </div>
             </div>
         </section>
@@ -274,11 +234,12 @@
                 <button type="submit">Send Message</button>
             </div>
         </section>
-    </div>
 
-    <footer>
-        <p>© 2024 Omar Amhaoud - All Rights Reserved</p>
-    </footer>
+        <!-- Footer -->
+        <footer>
+            <p>© 2024 Omar Amhaoud - All Rights Reserved</p>
+        </footer>
+    </div>
 
 </body>
 </html>
