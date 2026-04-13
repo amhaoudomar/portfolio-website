@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omar Amhaoud — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">OA<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#certifications" class="nav-link">Certs</a></li>
+        <li><a href="#contact" class="nav-link btn-nav">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="closeMobile()">About</a></li>
+      <li><a href="#experience" onclick="closeMobile()">Experience</a></li>
+      <li><a href="#skills" onclick="closeMobile()">Skills</a></li>
+      <li><a href="#certifications" onclick="closeMobile()">Certifications</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="pulse-dot"></span>
+        Available for Freelance
+      </div>
+      <h1 class="reveal-up delay-1">
+        <span class="hero-hi">Hi, I'm</span>
+        <span class="hero-name gradient-text">Omar Amhaoud</span>
+      </h1>
+      <div class="hero-typewriter reveal-up delay-2">
+        <span class="type-prefix">I'm a </span>
+        <span id="typewriter" class="type-text"></span>
+        <span class="type-cursor">|</span>
+      </div>
+      <p class="hero-desc reveal-up delay-3">
+        IT Specialist · Digital Marketer · Online Entrepreneur<br>
+        Based in <strong>Guelmim, Morocco</strong> — building tech & digital businesses.
+      </p>
+      <div class="hero-cta reveal-up delay-4">
+        <a href="#contact" class="btn btn-primary">
+          <span>Get In Touch</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#experience" class="btn btn-ghost">View My Work</a>
+      </div>
+      <div class="hero-socials reveal-up delay-5">
+        <a href="https://www.linkedin.com/in/omaramhaoud/" target="_blank" class="social-icon" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="#contact" class="social-icon" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// about me</span>
+        <h2>Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm a passionate <strong>IT Specialist, Frontend Developer & Digital Marketer</strong> with a deep love for building things that live on the internet. Based in <strong>Guelmim, Morocco</strong>, I've been freelancing and self-educating since 2021 — continuously evolving my skills across web development, digital marketing, and emerging technologies like AI.</p>
+          <p style="margin-top:1rem">Beyond code, I run multiple <strong>online businesses</strong> — from <strong>Print on Demand</strong> to <strong>Content Creation</strong> — blending creative entrepreneurship with technical expertise. My background bridges <strong>technical infrastructure</strong> with <strong>digital marketing strategy</strong>, giving me a unique full-spectrum perspective on building and growing online ventures.</p>
+          <div class="about-stats">
+            <div class="stat-box">
+              <span class="stat-num gradient-text">4+</span>
+              <span class="stat-label">Years Freelancing</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num gradient-text">3+</span>
+              <span class="stat-label">Online Businesses</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num gradient-text">11+</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num gradient-text">∞</span>
+              <span class="stat-label">Curiosity</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal">
+          <div class="avatar-wrapper">
+            <div class="avatar-rings">
+              <div class="ring ring-1"></div>
+              <div class="ring ring-2"></div>
+              <div class="ring ring-3"></div>
+            </div>
+            <div class="avatar-core">
+              <span>OA</span>
+            </div>
+            <div class="avatar-badge">
+              <span class="dot-green"></span> Available
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// experience</span>
+        <h2>Work History</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-top">
+              <div>
+                <h3>Freelance & Self-Education</h3>
+                <span class="company-name">Self Employed</span>
+              </div>
+              <span class="badge badge-full">Full-time</span>
+            </div>
+            <div class="card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Aug 2021 – Present · 4+ yrs</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Guelmim, Morocco</span>
+            </div>
+            <p>Running independent freelance projects while continuously upskilling in modern web technologies, AI-assisted development, and digital solutions. Building real-world applications and client solutions remotely as a digital nomad.</p>
+            <div class="card-tags">
+              <span>React.js</span><span>Node.js</span><span>JavaScript</span><span>SQL</span><span>WordPress</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-top">
+              <div>
+                <h3>Frontend Developer</h3>
+                <span class="company-name">DARCOM Sarl — Bâtiment & Travaux Publics</span>
+              </div>
+              <span class="badge badge-intern">Internship</span>
+            </div>
+            <div class="card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Apr 2021 · 1 month</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Guelmim (Remote)</span>
+            </div>
+            <p>Developed and maintained frontend interfaces for the construction company's digital presence. Gained hands-on experience with real-world web development workflows and client requirements.</p>
+            <div class="card-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-top">
+              <div>
+                <h3>IT Maintenance & Network Support Technician</h3>
+                <span class="company-name">ONEP — Office National de l'Eau Potable</span>
+              </div>
+              <span class="badge badge-intern">Internship</span>
+            </div>
+            <div class="card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jan 2019 · 1 month</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Guelmim, Morocco</span>
+            </div>
+            <p>Provided technical support and maintenance for IT systems and network infrastructure at a national public water utility office.</p>
+            <div class="card-tags">
+              <span>Networking</span><span>IT Support</span><span>Hardware</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-top">
+              <div>
+                <h3>IT System Data Services</h3>
+                <span class="company-name">AREF Guelmim-Oued Noun — MENPS</span>
+              </div>
+              <span class="badge badge-intern">Internship</span>
+            </div>
+            <div class="card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Jun 2016 · 1 month</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Guelmim, Morocco</span>
+            </div>
+            <p>Assisted with data services and IT system operations within the regional education authority's technical department.</p>
+            <div class="card-tags">
+              <span>Data Services</span><span>IT Systems</span><span>Administration</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// education</span>
+        <h2>Academic Background</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-icon-wrap"><span>🎓</span></div>
+          <h3>IT Development Techniques</h3>
+          <span class="edu-school">ISTA NTIC Guelmim</span>
+          <span class="edu-year">Sep 2019 – Jul 2021</span>
+          <p>Specialized Technician diploma in software development, web technologies, and IT project management.</p>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon-wrap"><span>🔧</span></div>
+          <h3>IT & Network Support Maintenance</h3>
+          <span class="edu-school">ISTA NTIC Guelmim</span>
+          <span class="edu-year">Sep 2017 – Jul 2019</span>
+          <p>Technical diploma covering computer hardware, network infrastructure, and IT support systems.</p>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon-wrap"><span>📚</span></div>
+          <h3>Bachelor's — English Studies</h3>
+          <span class="edu-school">Université Ibn Zohr</span>
+          <span class="edu-year">Agadir, Morocco</span>
+          <p>Academic background in English language enhancing communication in international tech environments.</p>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon-wrap"><span>💼</span></div>
+          <h3>Microsoft Office Specialist</h3>
+          <span class="edu-school">ISTA NTIC Guelmim</span>
+          <span class="edu-year">Jan 2016 – Jul 2016</span>
+          <p>Qualifying training certificate as Office Technician certified in Microsoft Office Specialist (MOS).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// skills</span>
+        <h2>Tech Stack</h2>
+      </div>
+      <div class="skills-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="tools">Tools & Other</button>
+        <button class="filter-btn" data-filter="marketing">Digital Business</button>
+      </div>
+      <div class="skills-grid" id="skillsGrid">
+        <div class="skill-card reveal" data-category="frontend">
+          <div class="skill-header">
+            <span class="skill-emoji">⚡</span>
+            <span class="skill-name">HTML5</span>
+            <span class="skill-pct">95%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="frontend">
+          <div class="skill-header">
+            <span class="skill-emoji">🎨</span>
+            <span class="skill-name">CSS3</span>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="frontend">
+          <div class="skill-header">
+            <span class="skill-emoji">🟨</span>
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="frontend">
+          <div class="skill-header">
+            <span class="skill-emoji">⚛️</span>
+            <span class="skill-name">React.js</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="frontend">
+          <div class="skill-header">
+            <span class="skill-emoji">📱</span>
+            <span class="skill-name">UX Design</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="backend">
+          <div class="skill-header">
+            <span class="skill-emoji">🟢</span>
+            <span class="skill-name">Node.js</span>
+            <span class="skill-pct">78%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="78"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="backend">
+          <div class="skill-header">
+            <span class="skill-emoji">🗄️</span>
+            <span class="skill-name">SQL</span>
+            <span class="skill-pct">82%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="82"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="backend">
+          <div class="skill-header">
+            <span class="skill-emoji">🦀</span>
+            <span class="skill-name">Rust</span>
+            <span class="skill-pct">60%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="60"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="tools">
+          <div class="skill-header">
+            <span class="skill-emoji">🔵</span>
+            <span class="skill-name">WordPress</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="tools">
+          <div class="skill-header">
+            <span class="skill-emoji">🤖</span>
+            <span class="skill-name">AI Development</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="tools">
+          <div class="skill-header">
+            <span class="skill-emoji">🌐</span>
+            <span class="skill-name">Networking</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="tools">
+          <div class="skill-header">
+            <span class="skill-emoji">💻</span>
+            <span class="skill-name">IT Support</span>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="marketing">
+          <div class="skill-header">
+            <span class="skill-emoji">📢</span>
+            <span class="skill-name">Digital Marketing</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="marketing">
+          <div class="skill-header">
+            <span class="skill-emoji">🖨️</span>
+            <span class="skill-name">Print on Demand</span>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="88"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="marketing">
+          <div class="skill-header">
+            <span class="skill-emoji">🎬</span>
+            <span class="skill-name">Content Creation</span>
+            <span class="skill-pct">82%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="82"></div></div>
+        </div>
+        <div class="skill-card reveal" data-category="marketing">
+          <div class="skill-header">
+            <span class="skill-emoji">🛒</span>
+            <span class="skill-name">E-Commerce</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// certifications</span>
+        <h2>Licenses & Certifications</h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-logo-box">in</div>
+          <div class="cert-info">
+            <h3>Vibe Coding Fundamentals</h3>
+            <p>Tools and Best Practices</p>
+            <span class="cert-date">Mar 2026 · LinkedIn</span>
+            <div class="cert-tags"><span>AI Dev</span><span>Artificial Intelligence</span></div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo-box">in</div>
+          <div class="cert-info">
+            <h3>SQL Essential Training</h3>
+            <p>Database querying & management</p>
+            <span class="cert-date">Aug 2023 · LinkedIn</span>
+            <div class="cert-tags"><span>SQL</span></div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo-box">in</div>
+          <div class="cert-info">
+            <h3>SQL for Data Analysis</h3>
+            <p>Analytical queries & insights</p>
+            <span class="cert-date">Aug 2023 · LinkedIn</span>
+            <div class="cert-tags"><span>SQL</span><span>Data Analysis</span></div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo-box">in</div>
+          <div class="cert-info">
+            <h3>React.js Essential Training</h3>
+            <p>Modern React development</p>
+            <span class="cert-date">Aug 2023 · LinkedIn</span>
+            <div class="cert-tags"><span>React.js</span></div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo-box">in</div>
+          <div class="cert-info">
+            <h3>Node.js Essential Training</h3>
+            <p>Server-side JavaScript</p>
+            <span class="cert-date">Aug 2023 · LinkedIn</span>
+            <div class="cert-tags"><span>Node.js</span></div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo-box">in</div>
+          <div class="cert-info">
+            <h3>JavaScript Essential Training</h3>
+            <p>Core JavaScript fundamentals</p>
+            <span class="cert-date">Aug 2023 · LinkedIn</span>
+            <div class="cert-tags"><span>JavaScript</span></div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo-box">in</div>
+          <div class="cert-info">
+            <h3>Rust for JavaScript Developers</h3>
+            <p>Systems programming with Rust</p>
+            <span class="cert-date">Aug 2023 · LinkedIn</span>
+            <div class="cert-tags"><span>Rust</span><span>JavaScript</span></div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo-box">in</div>
+          <div class="cert-info">
+            <h3>UX Foundations: Multidevice Design</h3>
+            <p>Cross-platform user experience</p>
+            <span class="cert-date">Aug 2023 · LinkedIn</span>
+            <div class="cert-tags"><span>UX</span><span>Cross-platform</span></div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo-box">in</div>
+          <div class="cert-info">
+            <h3>WordPress Essential Training</h3>
+            <p>WordPress site development (2022)</p>
+            <span class="cert-date">Aug 2023 · LinkedIn</span>
+            <div class="cert-tags"><span>WordPress</span></div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo-box">in</div>
+          <div class="cert-info">
+            <h3>CSS Essential Training</h3>
+            <p>Modern CSS techniques</p>
+            <span class="cert-date">Jul 2023 · LinkedIn</span>
+            <div class="cert-tags"><span>CSS</span></div>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo-box">in</div>
+          <div class="cert-info">
+            <h3>HTML Essential Training</h3>
+            <p>HTML fundamentals & semantics</p>
+            <span class="cert-date">Jul 2023 · LinkedIn</span>
+            <div class="cert-tags"><span>HTML</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// contact</span>
+        <h2>Let's Work Together</h2>
+        <p class="section-desc">Have a project in mind? Let's build something amazing.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Get In Touch</h3>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="ci-icon">📍</div>
+              <div class="ci-text">
+                <span>Location</span>
+                <strong>Guelmim, Morocco</strong>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">💼</div>
+              <div class="ci-text">
+                <span>Status</span>
+                <strong>Open to Freelance</strong>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">🌍</div>
+              <div class="ci-text">
+                <span>Work Style</span>
+                <strong>Remote / Digital Nomad</strong>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">⚡</div>
+              <div class="ci-text">
+                <span>Response Time</span>
+                <strong>Within 24 hours</strong>
+              </div>
+            </div>
+          </div>
+          <a href="https://www.linkedin.com/in/omaramhaoud/" target="_blank" class="linkedin-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" placeholder="Your name" autocomplete="name" />
+              <span class="form-error" id="fnameErr">Please enter your name</span>
+            </div>
+            <div class="form-group">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" placeholder="your@email.com" autocomplete="email" />
+              <span class="form-error" id="femailErr">Please enter a valid email</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" placeholder="Project inquiry, collaboration..." />
+            <span class="form-error" id="fsubjectErr">Please enter a subject</span>
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" rows="5" placeholder="Tell me about your project, goals, or just say hi..."></textarea>
+            <span class="form-error" id="fmessageErr">Please enter your message</span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+            <span class="btn-label">Send Message</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <div class="btn-loader" id="btnLoader"></div>
+          </button>
+          <div class="form-success hidden" id="formSuccess">
+            <span>✅ Message sent! I'll get back to you soon.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <a href="#hero" class="footer-logo">OA<span>.</span></a>
+        <p>Designed & Built by <strong>Omar Amhaoud</strong> · Guelmim, Morocco</p>
+        <p class="footer-copy">© 2026 · All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
